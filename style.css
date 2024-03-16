@@ -1,0 +1,286 @@
+@font-face {
+    font-family: "font1";
+    src: url(font/Goldbill-XSMedium.ttf);
+}
+
+@font-face {
+    font-family: "font2";
+    src: url(font/Montserrat-Medium.ttf);
+}
+
+body{
+    margin: 0;
+}
+
+h1{
+    color: #dfcab8;
+    margin-top: 0;
+    font-family: "font1";
+    font-size: 725%;
+}
+
+.portrait-container{
+    background-color: #211D1D;
+    max-width: 1000px;
+    margin: auto;
+}
+
+.portrait{
+    margin: 0 9%;
+}
+
+.container{
+    display: flex;
+    width: 325px;
+    border-radius: 8px;
+    background: #211D1D;
+    flex-direction: column;
+    align-items: center;
+    row-gap: 30px;
+}
+
+.circular-progress{
+    position: relative;
+    height: 250px;
+    width: 250px;
+    border-radius: 50%;
+    background: conic-gradient(#7d2ae8 3.6deg, #ededed 0deg);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.circular-progress::before{
+    content: "";
+    position: absolute;
+    height: 210px;
+    width: 210px;
+    border-radius: 50%;
+    background-color: #211D1D;
+}
+
+.progress-value{
+    position: relative;
+    font-size: 300%;
+    font-weight: 600;
+    color: #dfcab8;
+    font-family: "font2";
+}
+
+
+.partie1{
+    display: flex;
+}
+
+.icone-bonhomme1 img,
+.icone-bonhomme2 img{
+    width: 110px;
+    height: 110px;
+    margin-left: -10%;
+    animation: bounce 2s infinite;
+}
+
+.icone-bonhomme2{
+    margin-bottom: 5%;
+}
+
+.b3{
+    margin-left: 0;
+}
+
+.bonhomme{
+    display: flex;
+    flex-direction: column;
+    margin-left: 10%;
+}
+
+.partie1 p,
+.partie2 p{
+    color: #dfcab8;
+}
+
+.barre-progression-circulaire p,
+.partie2 p,
+.bonhomme p{
+    font-family: "font2";
+    font-size: 145%;
+}
+
+.paragraphe-partie1{
+    color: #dfcab8;
+    font-family: "font2";
+    font-size: 150%;
+    font-weight: bold;
+    margin-top: 7%;
+}
+
+.barre-pointillé{
+    height: 2px;
+    color: #7C4F38;
+    border-bottom: 8px dotted #7C4F38;
+    margin-top: 5%;
+    margin-bottom: 10%;
+}
+
+.partie2{
+    display: flex;
+}
+
+.partie2 p{
+    word-spacing: 10px;
+}
+
+.partie2-p-right{
+    margin-left: 5%;
+}
+
+.carine{
+    color: #dfcab8;
+    font-family: "font2";
+    font-size: 150%;
+    font-weight: bold;
+    margin-top: 7%;
+    text-align: right;
+}
+
+h2{
+    text-align: center;
+    font-family: "font2";
+    font-size: 250%;
+    color: #dfcab8;
+    font-weight: bold;
+
+}
+
+.sous-titre{
+    text-align: center;
+    color: #dfcab8;
+    font-family: "font2";
+    font-size: 100%;
+    margin-bottom: 10%;
+}
+
+.flex{
+    display: flex;
+    justify-content: space-between;
+    margin-top: 10%;
+}
+
+.miv span,
+.pp span{
+    color: #dfcab8;
+    font-size: 109%;
+    font-family: "font2";
+}
+
+.pp{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 190px;
+}
+
+.pp img{
+    width:  150px;
+    height: 150px;
+    border-radius: 50%;
+    overflow: hidden;
+}
+
+.progress-container {
+    width: 40%;
+    margin: 20px auto;
+    height: 30px;
+    background-color: #dfcab8;
+    border-radius: 15px;
+    overflow: hidden;
+    margin-top: 8%;
+    margin-left: 4%;
+}
+
+.progress-bar {
+    height: 100%;
+    background-color: #7C4F38;
+    border-radius: 15px;
+    width: 0;
+    transition: width 0.3s ease-in-out;
+}
+
+.dior{
+    width: 100px;
+}
+
+.lv{
+    width: 200px;
+}
+
+.givenchy,
+.gucci,
+.balenciaga{
+    width: 150px;
+}
+
+.miv{
+    margin-left: 10%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+@media (max-width: 380px){
+    .partie1{
+        flex-direction: column;
+    }
+
+    h1{
+        font-size: 400%;
+    }
+
+    .icone-bonhomme1 img,
+    .icone-bonhomme2 img{
+        margin-left: -21%;
+    }
+
+    .bonhomme p{
+        margin-right: 11%;
+    }
+
+    .partie2{
+        flex-direction: column;
+    }
+
+    .pp img{
+        width: 80px;
+        height: 80px;
+    }
+
+    .miv span,
+    .pp span{
+        font-size: 65%;
+    }
+
+    .givenchy,
+    .balenciaga,
+    .gucci,
+    .lv,
+    .dior{
+        width: 70px;
+    }
+
+    .progress-container{
+        height: 15px;
+    }
+}
+
+@keyframes bounce {
+    0% {
+        transform: translateY(0);
+    }
+    50% {
+        transform: translateY(-20px);
+    }
+    100% {
+        transform: translateY(0);
+    }
+}
